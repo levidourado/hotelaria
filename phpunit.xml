@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true" stopOnFailure="false">
+	<testsuites>
+		<testsuite name="Hotelaria Test Suite">
+			<directory suffix=".php">
+				tests/
+			</directory>
+		</testsuite>
+	</testsuites>
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">
+				src/
+			</directory>
+			<exclude>
+				<directory suffix=".php">
+					src/php_files/
+				</directory>
+			</exclude>
+		</whitelist>
+	</filter>
+	<logging>
+		<log type="testdox-text" target="phpunit-testdox.txt" />
+	</logging>
+	<coverage>
+		<include>
+			<directory suffix=".php">
+				src/
+			</directory>
+		</include>
+		<exclude>
+			<directory suffix=".php">
+				src/php_files/
+			</directory>
+		</exclude>
+		<report>
+			<clover outputFile="coverage/clover.xml" />
+			<html outputDirectory="coverage/html" />
+			<text outputFile="coverage/coverage.txt" showUncoveredFiles="true" />
+		</report>
+	</coverage>
+</phpunit>
