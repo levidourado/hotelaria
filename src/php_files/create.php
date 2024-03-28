@@ -9,7 +9,8 @@ $cpf = $_POST['cpf'];
 $data_de_nascimento = $_POST['data_de_nascimento'];
 $data_de_nascimento = DateTime::createFromFormat('d/m/Y', $data_de_nascimento)->format('Y-m-d');
 
-$sql = "INSERT INTO clientes (nome, telefone, email, cpf, data_de_nascimento) VALUES (:nome, :telefone, :email, :cpf, :data_de_nascimento)";
+$sql = "INSERT INTO clientes (nome, telefone, email, cpf, data_de_nascimento) " .
+       "VALUES (:nome, :telefone, :email, :cpf, :data_de_nascimento)";
 $stmt = $pdo->prepare($sql);
 
 $stmt->bindParam(':nome', $nome);

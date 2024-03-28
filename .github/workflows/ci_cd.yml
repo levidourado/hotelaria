@@ -21,19 +21,6 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-suggest
       - name: Lint PHP
         run: ./vendor/bin/phpcs --standard=PSR12 src/
-      - name: Correções de código PHP com o PHPCBF
-        run: ./vendor/bin/phpcbf --standard=PSR12 src/
-        continue-on-error: true
-      - name: Verifica se todas as correções foram aplicadas
-        run: |
-          RESULT=$(./vendor/bin/phpcs --standard=PSR12 src/);
-          echo "$RESULT";
-          if [[ $RESULT == *"FOUND 0 ERRORS AND 0 WARNINGS"* ]]; then
-            echo "Todos os problemas de estilo foram corrigidos.";
-          else
-            echo "Existem problemas de estilo não corrigidos.";
-            exit 1;
-          fi
 
   build:
     runs-on: ubuntu-latest
