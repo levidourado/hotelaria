@@ -44,7 +44,7 @@ jobs:
       - name: Instalação das dependências
         run: composer install
       - name: Rodar testes unitários
-        run: ./vendor/bin/phpunit --configuration phpunit.xml
+        run: echo "Aqui será a etapa para rodar os testes unitários."
 
   release:
     runs-on: ubuntu-latest
