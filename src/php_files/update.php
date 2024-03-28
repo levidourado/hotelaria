@@ -1,4 +1,5 @@
 <?php
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -12,7 +13,14 @@ $email = $_POST['email'];
 $cpf = preg_replace('/\D/', '', $_POST['cpf']);
 $data_de_nascimento = $_POST['data_de_nascimento'];
 
-$sql = "UPDATE clientes SET nome = :nome, telefone = :telefone, email = :email, cpf = :cpf, data_de_nascimento = :data_de_nascimento WHERE id = :id";
+$sql = "UPDATE clientes SET " .
+    "nome = :nome, " .
+    "telefone = :telefone, " .
+    "email = :email, " .
+    "cpf = :cpf, " .
+    "data_de_nascimento = :data_de_nascimento " .
+    "WHERE id = :id";
+
 $stmt = $pdo->prepare($sql);
 
 $stmt->bindParam(':id', $id);
@@ -28,4 +36,4 @@ if ($stmt->execute()) {
     $errorInfo = $stmt->errorInfo();
     echo json_encode(["success" => false, "message" => "Erro ao atualizar cliente: {$errorInfo[2]}"]);
 }
-?>
+

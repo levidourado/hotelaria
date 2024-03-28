@@ -1,4 +1,5 @@
 <?php
+
 include 'db.php';
 
 $id = $_POST['id'];
@@ -13,4 +14,4 @@ if ($stmt->execute()) {
 } else {
     echo "Erro ao deletar cliente.";
 }
-?>
+

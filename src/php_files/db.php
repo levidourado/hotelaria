@@ -1,4 +1,5 @@
 <?php
+
 $host = 'localhost';
 $dbname = 'hotelaria';
 $username = 'root';
@@ -10,4 +11,4 @@ try {
 } catch (PDOException $e) {
     die("Erro de conexão: " . $e->getMessage());
 }
-?>
+

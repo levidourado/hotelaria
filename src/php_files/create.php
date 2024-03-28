@@ -1,4 +1,5 @@
 <?php
+
 include 'db.php';
 
 $nome = $_POST['nome'];
@@ -23,4 +24,3 @@ if ($stmt->execute()) {
     echo "Erro ao criar cliente: " . print_r($stmt->errorInfo(), true);
 }
 
-?>
