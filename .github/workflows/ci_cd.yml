@@ -60,5 +60,4 @@ jobs:
           git config --local user.name "GitHub Actions"
       - name: Tag release
         run: |
-          git tag -a "v$(date +'%Y.%m.%d.%H%M%S')" -m "Generated tag from GitHub Actions"
-          git push --tags
+          echo "Aqui será a etapa da geração da tag automatizada."
