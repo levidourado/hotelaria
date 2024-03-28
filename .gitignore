@@ -1,0 +1,47 @@
+/vendor/
+.env
+src/db.php
+.env.example
+
+# Arquivos de IDE/editor
+.idea/
+.vscode/
+*.sublime*
+
+# Arquivos específicos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Diretórios de dependências
+node_modules/
+bower_components/
+
+# Diretórios de build/compilação
+/dist/
+/build/
+/bin/
+/tmp/
+
+# Logs e bancos de dados
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+# Certificados
+*.pem
+*.key
+
+# Uploads
+/uploads/
+/media/
+
+# Arquivos de cache
+composer.lock
+.cache
+*.cache
+*.swp
+*.swo
+
+# Sessões
+/sessions/
