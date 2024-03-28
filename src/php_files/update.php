@@ -36,4 +36,3 @@ if ($stmt->execute()) {
     $errorInfo = $stmt->errorInfo();
     echo json_encode(["success" => false, "message" => "Erro ao atualizar cliente: {$errorInfo[2]}"]);
 }
-

@@ -12,4 +12,3 @@ $stmt->execute();
 $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
 
 echo json_encode($cliente);
-

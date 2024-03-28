@@ -14,4 +14,3 @@ if ($stmt->execute()) {
 } else {
     echo "Erro ao deletar cliente.";
 }
-

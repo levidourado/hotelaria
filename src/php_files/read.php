@@ -13,4 +13,3 @@ foreach ($clientes as $cliente) {
     echo "Telefone: " . $cliente['telefone'] . " - Email: " . $cliente['email'] . "\n";
     echo "CPF: " . $cliente['cpf'] . " - Data de Nascimento: " . $cliente['data_de_nascimento'] . "<br>";
 }
-

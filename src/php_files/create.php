@@ -23,4 +23,3 @@ if ($stmt->execute()) {
 } else {
     echo "Erro ao criar cliente: " . print_r($stmt->errorInfo(), true);
 }
-
